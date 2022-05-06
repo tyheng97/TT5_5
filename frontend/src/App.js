@@ -7,9 +7,20 @@ import Project from "./pages/Projects/Project"
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/project" element={<Project />} />
+      <Route
+        path="/"
+        element={<Login />}
+      />
+      <Route
+        path="/projects"
+        element={<Projects />}
+        // element={!user ? <Navigate replace to="/" /> : <Home />}
+      />
+      <Route
+        path="/project:projectId"
+        element={<Project />}
+        // element={!user ? <Navigate replace to="/" /> : <Home />}
+      />
     </Routes>
   );
 }

@@ -9,7 +9,7 @@ const expenseRoute = require("./routes/expenses");
 require("dotenv").config();
 
 const app = express(); //create express server and the port
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3002;
 
 app.use(cors()); //middleware to parse json
 app.use(express.json());

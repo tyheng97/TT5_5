@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
   flex-flow: column;
-  max-width: 700px;
+  max-width: 1000px;
   height: 100%;
 }

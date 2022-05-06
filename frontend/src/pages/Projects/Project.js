@@ -45,8 +45,8 @@ const Project = (props) => {
           </button>
         </div>
         <div className={classes.divider} />
-        {DUMMY_EXPENSE.map((expense) => {
-          return <Expense {...expense}/>
+        {DUMMY_EXPENSE.map((expense, i) => {
+          return <Expense key={i} {...expense}/>
         })}
       </ContentWrapper>
     </PageWrapper>
