@@ -24,17 +24,17 @@ router.route("/")
         }
     });
 
+//GET Project
+router.get("/:id", async (req, res) => {
+  try {
+    const project = await Project.findOne({project_id:req.params.id});
+    const {  ...others } = project._doc;
+    res.status(200).json(others);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-// //get project by id
-// router.route("/:id").get(async(req,res)=>{
-//     try {
-//         const project = await Project.findById(req.params.id);
-//         const {...others } = project._doc;
-//         res.status(200).json(others);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
 // //update project by id
 // router.route("/:id").put(async(req,res)=>{
 //     if (req.body.projectId === req.params.id) {
