@@ -1,0 +1,14 @@
+.loginForm {
+  display: flex;
+  flex-flow: column;
+}
+
+.loginForm label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.loginForm button {
+    margin-top: 3em;
+}

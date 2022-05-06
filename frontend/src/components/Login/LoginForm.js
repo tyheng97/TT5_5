@@ -6,7 +6,7 @@ const LoginForm = (props) => {
   };
 
   return (
-    <form className={classes.loginForm}>
+    <form className={classes.loginForm} onSubmit={submitHandler}>
       <label>
         Username:
         <input type="text" name="username" />
