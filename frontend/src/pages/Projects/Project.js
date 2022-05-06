@@ -31,10 +31,14 @@ const Project = (props) => {
     setShowExpenseForm(false);
   };
 
+  const addHandler = (data) => {
+    DUMMY_EXPENSE.push(data)
+  }
+
   return (
     <PageWrapper>
       <ContentWrapper>
-        {showExpenseForm && <NewExpenseForm onCancel={closeExpenseHandler} />}
+        {showExpenseForm && <NewExpenseForm onCancel={closeExpenseHandler} onAdd={addHandler}/>}
         <div className={classes.header}>
           <h1>Project Name</h1>
           <button
