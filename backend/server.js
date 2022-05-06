@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose"); //connect to mongodb
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
+const projectRoute=require("./routes/projects");
 
 require("dotenv").config();
 
@@ -21,6 +22,7 @@ connection.once("open", () => {
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/projects",projectRoute);
 
 app.listen(port, () => {
   //start server

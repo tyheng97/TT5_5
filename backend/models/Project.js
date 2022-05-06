@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 
 const ProjectSchema = new mongoose.Schema(
   {
+    user_id:{
+      type: mongoose.SchemaTypes.ObjectId,ref:'User'
+    },
     name: {
       type: String,
       required: true,
@@ -12,7 +15,7 @@ const ProjectSchema = new mongoose.Schema(
       required:true,
     },
     budget: {
-      type:float,
+      type:Number,
       required:true,
     },
   },
