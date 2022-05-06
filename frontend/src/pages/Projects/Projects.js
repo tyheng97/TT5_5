@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import ContentWrapper from "../../components/utility/ContentWrapper";
 import PageWrapper from "../../components/utility/PageWrapper";
 import classes from "./Projects.module.css";
+
+const projectList = [
+  { id: 2, name: "Hi", description: "231r4124", budget: "143" },
+  { id: 3, name: "Hi", description: "231r4124", budget: "143" },
+];
+
 const Project = (props) => {
   let navigate = useNavigate();
   const clickHandler = (e) => {
@@ -21,10 +28,12 @@ const Project = (props) => {
     </div>
   );
 };
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects/")
+    fetch("http://localhost:3002/api/projects/")
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error", error));

@@ -21,6 +21,8 @@ router.route("/").get(async (req, res) => {
     res.send(err);
   }
 });
+
+//GET Project
 router.get("/:id", async (req, res) => {
   try {
     const project = await Project.findOne({ project_id: req.params.id });
