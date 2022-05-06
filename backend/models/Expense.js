@@ -2,18 +2,14 @@ const mongoose = require("mongoose");
 
 const ExpenseSchema = new mongoose.Schema(
   {
-    id: {
+    project_id: {
       type: String,
       required: true,
-      unique: true,
+      ref:'Project'
     },
-    // project_id: {
-    //   type: String,
-    //   required: true,
-    // },
     category_id: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,

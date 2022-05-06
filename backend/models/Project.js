@@ -7,7 +7,7 @@ const ProjectSchema = new mongoose.Schema(
       required: true,
     },
     user_id:{
-      type:Number,
+      type:mongoose.SchemaTypes.ObjectId,
       required:true,
     },
 
