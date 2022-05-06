@@ -9,7 +9,7 @@ router.route("/create")
             const user=await User.findById(req.params.user_id);
             
             const newProject = new Project({
-                user_id:user,
+                user_id:ObjectId(user._id),
                 name: req.params.name,
                 description: req.params.description,
                 budget:req.params.budget,
