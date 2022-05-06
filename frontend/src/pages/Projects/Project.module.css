@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin: 10px;
+}
+.header h1 {
+  margin: 0;
+}
+
+.add-expense {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  font-size: 1.1em;
+  gap: 0.5em;
+}
+
+.divider {
+  height: 1px;
+  border-top: 0.5px solid #000;
+  margin: 10px 0 10px;
+  width: 100%;
+}
