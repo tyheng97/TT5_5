@@ -1,8 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose"); //connect to mongodb
+
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
+const expenseRoute = require("./routes/expenses");
 
 require("dotenv").config();
 
@@ -21,6 +23,7 @@ connection.once("open", () => {
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/expenses", expenseRoute);
 
 app.listen(port, () => {
   //start server
