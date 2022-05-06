@@ -14,3 +14,7 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
+.project {
+  cursor: pointer;
+}
