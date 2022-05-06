@@ -7,10 +7,10 @@ const ExpenseSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    project_id: {
-      type: String,
-      required: true,
-    },
+    // project_id: {
+    //   type: String,
+    //   required: true,
+    // },
     category_id: {
       type: String,
       required: true,
