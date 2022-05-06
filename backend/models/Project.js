@@ -6,9 +6,9 @@ const ProjectSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    user_id:{
-      type:mongoose.SchemaTypes.ObjectId,
-      required:true,
+    user_id: {
+      type: Number,
+      required: true,
     },
 
     name: {
@@ -16,15 +16,14 @@ const ProjectSchema = new mongoose.Schema(
       required: true,
     },
     budget: {
-      type:Number,
-      required:true,
+      type: Number,
+      required: true,
     },
 
     description: {
       type: String,
-      required:true,
+      required: true,
     },
-
   },
 
   { timestamps: true }

@@ -15,7 +15,6 @@ const Project = (props) => {
   const clickHandler = (e) => {
     // navigate(`/projects/${project.id}`)
   };
-
   return (
     <div onClick={clickHandler} className={classes.project}>
       <div className={classes.header}>
@@ -39,7 +38,6 @@ const Projects = () => {
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error", error));
   }, []);
-
   console.log(projects);
   return (
     <PageWrapper>
@@ -52,5 +50,4 @@ const Projects = () => {
     </PageWrapper>
   );
 };
-
 export default Projects;
